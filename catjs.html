@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Concatenate Random Number to Name</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      function gencat(){
+        name = document.getElementById("name").value;
+        num = getRandom(6,15);
+        cat = name+' '+num;
+        document.getElementById("result").innerHTML = name+" "+num;
+      }
+      function getRandom(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+    </script>
+
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center"> Concatenate Random Number to Name</h1>
+        <div class="form-group">
+         <label for="text">You Name:</label>
+         <input type="text" class="form-control" name="name" id="name">
+       </div>
+         <button type="button" class="btn btn-default" onclick="gencat()">Submit</button>
+    </div>
+    <hr>
+      <div class="jumbotron text-center">
+        <h2 id="result">  </h2>
+      </div>
+      <div class="text-right">
+        <a href="index.php">PHP version</a>
+
+      </div>
+  </body>
+</html>

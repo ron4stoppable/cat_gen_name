@@ -1,0 +1,22 @@
+/* --- PHP example --------*/
+
+if(isset($_POST['name'])){            // checks if the variable is set or not
+  $num = rand(6,15);                // generates a random number with limit min:6 and max: 15
+  $name = $_POST['name'] . ' ' . $num;  // concatenate's and saves the user provided name and random to $name
+}
+
+//PS: no validation
+//live at digisa.ga/cat_num_name
+
+
+/* --------- simple JS example --------- */
+
+function gencat(){
+  name = document.getElementById("name").value;
+  num = getRandom(6,15);
+  cat = name+' '+num;
+  document.getElementById("result").innerHTML = name+" "+num;
+}
+function getRandom(min, max) {              // get a random integer number between a range
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
